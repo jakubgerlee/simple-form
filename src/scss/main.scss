@@ -76,4 +76,14 @@ body {
   border-radius: 16px;
   background-color: lavenderblush;
   padding: 16px;
+  margin: 2px;
+}
+
+@media only screen and (max-width: 440px) {
+  .form {
+    &__actions {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
