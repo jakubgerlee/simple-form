@@ -17,7 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: $violet;
-  color: black;
+  color: $black;
   font-family: "Lato", sans-serif;
   min-height: 100vh; //always center of the screen
 }
@@ -38,10 +38,12 @@ body {
     letter-spacing: 0.5px;
 
     &--load {
+      color: $black;
+      background-color: $white;
     }
     &--save {
-      color: #fff;
-      background-color: #121232;
+      color: $white;
+      background-color: $black;
     }
   }
 
