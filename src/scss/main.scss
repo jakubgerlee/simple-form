@@ -16,10 +16,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $violet;
   color: $black;
   font-family: "Lato", sans-serif;
   min-height: 100vh; //always center of the screen
+  background: #f1e7f3;
 }
 
 .form {
@@ -30,20 +30,34 @@ body {
   }
 
   &__button {
+    border: 1px solid $black;
     min-width: 200px;
     height: 48px;
     padding: 16px;
     border-radius: 4px;
     font-weight: 600px;
     letter-spacing: 0.5px;
+    transition: transform 1s ease-in-out;
+    outline-color: violet;
 
     &--load {
       color: $black;
       background-color: $white;
+      transition: background 0.3s ease-in-out;
+      &:hover {
+        background-color: #d3d4d8;
+        transform: scale(1.05) translateX(8px);
+      }
     }
+
     &--save {
       color: $white;
-      background-color: $black;
+      background-color: #a971b6;
+      transition: background 0.3s ease-in-out;
+      &:hover {
+        background-color: #945d98;
+        transform: scale(1.05) translateX(-8px);
+      }
     }
   }
 
@@ -61,6 +75,7 @@ body {
     width: 100%;
     min-height: 350px;
     margin-bottom: 8px;
+    outline-color: violet;
   }
 }
 
@@ -74,6 +89,7 @@ body {
   max-width: 544px;
   width: 100%;
   border-radius: 16px;
+  border: 1px solid $black;
   background-color: lavenderblush;
   padding: 16px;
   margin: 2px;
@@ -84,6 +100,26 @@ body {
     &__actions {
       display: flex;
       flex-direction: column;
+    }
+    &__button {
+      margin: 5px;
+      &--load {
+        transition: background 0.3s ease-in-out;
+        &:hover {
+          background-color: #d3d4d8;
+          transform: scale(1.05);
+        }
+      }
+
+      &--save {
+        color: $white;
+        background-color: #a971b6;
+        transition: background 0.3s ease-in-out;
+        &:hover {
+          background-color: #945d98;
+          transform: scale(1.05);
+        }
+      }
     }
   }
 }
