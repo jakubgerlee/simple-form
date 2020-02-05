@@ -318,20 +318,21 @@ html {
   -webkit-box-sizing: inherit;
           box-sizing: inherit; }
 
-body {
+.body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: #2d2241;
-  color: black;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #f3d4e7;
+  color: #121232;
   font-family: "Lato", sans-serif;
-  min-height: 100vh; }
+  min-height: 100vh;
+  margin: 4px; }
 
 .form__actions {
   display: -webkit-box;
@@ -345,15 +346,41 @@ body {
           align-items: center; }
 
 .form__button {
+  border: 1px solid #121232;
   min-width: 200px;
   height: 48px;
   padding: 16px;
   border-radius: 4px;
   font-weight: 600px;
-  letter-spacing: 0.5px; }
+  letter-spacing: 0.5px;
+  -webkit-transition: -webkit-transform 1s ease-in-out;
+  transition: -webkit-transform 1s ease-in-out;
+  -o-transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+  transition: transform 1s ease-in-out, -webkit-transform 1s ease-in-out;
+  outline-color: violet; }
+  .form__button--load {
+    color: #121232;
+    background-color: #ffffff;
+    -webkit-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
+    .form__button--load:hover {
+      background-color: #d3d4d8;
+      -webkit-transform: scale(1.05) translateX(8px);
+          -ms-transform: scale(1.05) translateX(8px);
+              transform: scale(1.05) translateX(8px); }
   .form__button--save {
-    color: #fff;
-    background-color: #121232; }
+    color: #ffffff;
+    background-color: #a971b6;
+    -webkit-transition: background 0.3s ease-in-out;
+    -o-transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out; }
+    .form__button--save:hover {
+      background-color: #945d98;
+      -webkit-transform: scale(1.05) translateX(-8px);
+          -ms-transform: scale(1.05) translateX(-8px);
+              transform: scale(1.05) translateX(-8px); }
 
 .form__label {
   display: block;
@@ -363,11 +390,13 @@ body {
 .form__textarea {
   border: 1px solid #2d2241;
   border-radius: 4px;
+  background: lavenderblush;
   padding: 12px;
   resize: none;
   width: 100%;
   min-height: 350px;
-  margin-bottom: 8px; }
+  margin-bottom: 8px;
+  outline-color: violet; }
 
 .header {
   font-weight: 600px;
@@ -378,7 +407,51 @@ body {
   max-width: 544px;
   width: 100%;
   border-radius: 16px;
-  background-color: lavenderblush;
-  padding: 16px; }
+  border: 1px solid #121232;
+  background-color: #f1e7f3;
+  padding: 16px;
+  margin: 10px; }
+
+.logo {
+  margin: 100px;
+  min-width: 100px;
+  max-width: 300px; }
+
+@media only screen and (max-width: 765px) {
+  .body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .form__actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .form__button {
+    margin: 5px; }
+    .form__button--load {
+      -webkit-transition: background 0.3s ease-in-out;
+      -o-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out; }
+      .form__button--load:hover {
+        background-color: #d3d4d8;
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05); }
+    .form__button--save {
+      color: #ffffff;
+      background-color: #a971b6;
+      -webkit-transition: background 0.3s ease-in-out;
+      -o-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out; }
+      .form__button--save:hover {
+        background-color: #945d98;
+        -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+                transform: scale(1.05); } }
 
 /*# sourceMappingURL=main.css.map */
